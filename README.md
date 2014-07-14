@@ -12,8 +12,9 @@ There's no sound right now, but if the game becomes popular, then I'll add music
 
 Controls
 --------
-Escape - Pause
-W,A,S,D - Movement
+Escape - Pause  
+W,A,S,D - Movement  
+Mouse - Camera
 
 Mulitplayer Setup
 -----------------
