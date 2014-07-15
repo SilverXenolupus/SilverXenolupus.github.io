@@ -30,4 +30,4 @@ GLOBAL SETUP
   
 Follow the LAN SETUP instructions, but make these changes.  
 1.Make sure that the person who is going to host the game has port forwarded the port "25432".  
-2.DO NOT have the people joining enter the local IP listed. Simply have the host Google "IP"., and put in the public IP that is shown.  
+2.DO NOT have the people joining enter the local IP listed. Simply have the host Google "IP", and put in the public IP that is shown.  
