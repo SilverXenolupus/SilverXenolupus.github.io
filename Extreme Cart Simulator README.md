@@ -13,9 +13,9 @@ There's no sound right now, but if the game becomes popular, then I'll add music
 Controls
 --------
 Escape - Pause  
-W,A,S,D - Movement, while in Drive ("W" makes you go) press and hold "S" to break, and while not moving press "S" again to go into Reverse.  This works vice versa.
-R - Reset Cart (for if you fall over)
-0 - Put Cart at Start Position (for if you get stuck)
+W,A,S,D - Movement, while in Drive ("W" makes you go) press and hold "S" to break, and while not moving press "S" again to go into Reverse.  This works vice versa.  
+R - Reset Cart (for if you fall over)  
+0 - Put Cart at Start Position (for if you get stuck)  
 Mouse - Camera  
 G - Change Camera View  
 
