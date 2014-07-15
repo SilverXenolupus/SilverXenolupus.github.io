@@ -1,4 +1,4 @@
-ExtremeCartSim
+Extreme Cart Simulator README
 ==============
 
 I made this game as a school project, and decided the best place to put it when it was done was GitHub.
