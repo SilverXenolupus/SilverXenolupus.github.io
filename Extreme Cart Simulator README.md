@@ -3,7 +3,7 @@ ExtremeCartSim
 
 I made this game as a school project, and decided the best place to put it when it was done was GitHub.
 
-Extreme Cart Simulator is a game where you drive around in a cart that does not work very well. In singleplayer, the goal is to drive around and collect 50 hats as fast as you can.  There are also three *secrets* you can find hidden in walls. You can also race with up to four friends in multiplayer over a LAN on randomly generated race tracks. 
+Extreme Cart Simulator is a game where you drive around in a cart that does not work very well. In singleplayer, the goal is to drive around and collect 50 hats as fast as you can.  There are also three *secrets* you can find hidden behind walls. You can also race with up to four friends in multiplayer over a LAN on randomly generated race tracks. 
 
 This game is a joke making fun of the little carts that administrators drive around at high schools. In singleplayer, the hat collecting is based on how the administrators would take your hat if you wore it to school. The multiplayer, however, is not based on anything, it is just a cool random racetrack generator I made for multiplayer to have infinite levels of fun. 
 
