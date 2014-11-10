@@ -1,7 +1,303 @@
 <html lang="en">
 <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+
+	
+    $("#homeB").click(function(){
+      $("#home").fadeIn("slow");
+	  $("#anim").fadeOut("slow");
+	  $("#grap").fadeOut("slow");
+	  $("#vidg").fadeOut("slow");
+	});
+	$("#animB").click(function(){
+      $("#home").fadeOut("slow");
+	  $("#anim").fadeIn("slow");
+	  $("#grap").fadeOut("slow");
+	  $("#vidg").fadeOut("slow");
+	});
+	$("#grapB").click(function(){
+      $("#home").fadeOut("slow");
+	  $("#anim").fadeOut("slow");
+	  $("#grap").fadeIn("slow");
+	  $("#vidg").fadeOut("slow");
+	});
+	$("#vidgB").click(function(){
+      $("#home").fadeOut("slow");
+	  $("#anim").fadeOut("slow");
+	  $("#grap").fadeOut("slow");
+	  $("#vidg").fadeIn("slow");
+    });
+  });
+  </script>
+  <link href="http://vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/4.10/video.js"></script>
   <link rel="shortcut icon" href="Portfolio/icon.ico"/>
+  <style>
+  @font-face {
+	font-family: boldfont;
+	src: url(Portfolio/Fonts/ERASBD.woff);
+  }
+  @font-face {
+	font-family: lightfont;
+	src: url(Portfolio/Fonts/ERASLGHT.woff);
+  }
+  @font-face {
+	font-family: midfont;
+	src: url(Portfolio/Fonts/ERASMD.woff);
+  }
+  @font-face {
+	font-family: demifont;
+	src: url(Portfolio/Fonts/ERASDEMI.woff);
+  }
+  .background {
+	background-color: rgb(24,102,163);
+	background: url(Portfolio/Background.png) repeat;
+  }
+  .header {
+	font-family: boldfont;
+	margin-left: 20%;
+	width: 60%;
+	align: center;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: rgb(235,211,0);
+	padding: 0.01%;
+	box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);
+  }
+  .buttonContainer {
+	margin-left: 30%;
+	width: 40%;
+  }
+  .homeButton {
+	font-family: midfont;
+	background-color: rgb(235,211,0);
+	color: rgb(24,102,163);
+	text-align: center;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	width: 8%;
+	float: left;
+	padding: 0.5%;
+	box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);
+	transition: background-color 0.2s;
+  }
+  .homeButton:hover {
+	background-color: rgb(255,242,125);
+  }
+  .homeButton:active {
+	background-color: rgb(168,151,0);
+	box-shadow:0px 0px 0px 0px rgba(50, 50, 50, 0.5);
+  }
+  .button {
+	font-family: midfont;
+	background-color: rgb(235,211,0);
+	color: rgb(24,102,163);
+	text-align: center;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	width: 25%;
+	float: left;
+	box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);
+	transition: background-color 0.2s;
+  }
+  .button:hover {
+	background-color: rgb(255,242,125);
+  }
+  .button:active {
+	background-color: rgb(168,151,0);
+	box-shadow:0px 0px 0px 0px rgba(50, 50, 50, 0.5);
+  }
+  .outermain {
+		margin-left: 25%;
+		padding-bottom: 5%;
+  }
+  .main {
+		font-family: lightfont;
+		align: center;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: rgb(235,211,0);
+		padding: 0.5%;
+		width: 50%;
+		position: absolute;
+		box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);
+		padding-bottom: 5%;
+  }
+  .vjs-default-skin { color: #EBD300; }
+  .vjs-default-skin .vjs-play-progress,
+  .vjs-default-skin .vjs-volume-level { background-color: #A8A100 }
+  .vjs-default-skin .vjs-control-bar,
+  .vjs-default-skin .vjs-big-play-button { background: rgba(24,102,163,0.7) }
+  .vjs-default-skin .vjs-slider { background: rgba(24,102,163,0.2333333333333333) }
+  .footer
+  {
+    background-color: rgb(29,122,196);
+	background: url(Portfolio/Background.png) repeat;
+	clear: both;
+	font-family: boldfont;
+	z-index: 10;
+    color: rgb(235,211,0);
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+	margin-left: 20%;
+    position: fixed;
+    bottom: 0px;
+    width: 60%;
+	box-shadow:3px -5px 19px 0px rgba(50, 50, 50, 0.5);
+	clip:100%;
+  }
+  .linkImage
+  {
+	opacity: 1.0;
+	transition: opacity 0.2s;
+  }
+  .linkImage:hover
+  {
+	opacity: 0.5;
+  }
+  </style>
 </head>
+<body class="background" link="#EBD300" vlink="#EBD300" alink="#EBD300">
 <title>David Draper's Digital Portfolio</title>
-<h1>Portfolio WIP</h1>
+<div class="header">
+<h1>David Draper's Digital Portfolio</h1>
+</div>
+<div class="buttonContainer">
+	<div id="homeB" class="homeButton">
+	<img src="Portfolio/homeIcon.png">
+	</div>
+	<div id="animB" class="button">
+	<h3>Animations</h3>
+	</div>
+	<div id="grapB" class="button">
+	<h3>Graphics</h3>
+	</div>
+	<div id="vidgB" class="button">
+	<h3>Video Games</h3>
+	</div>
+	<br style="clear: left;"/>
+	</div>
+<div class="outermain">
+	<div id="home" class="main">
+	<p style="font-family: demifont">Welcome to my digital portfolio.  This is where I put my best work.  Below is a small sample of the best I've done, if you're in a hurry.</p>
+	<h2 style="font-family: demifont">Animation</h2>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbInfiltrator.jpg" data-setup="{}">
+    <source src="Portfolio/Animations/The Infiltrator.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<h2 style="font-family: demifont">Video Game</h2>
+	</a>
+	<a href="http://ludumdare.com/compo/ludum-dare-30/comment-page-2/?action=preview&uid=38981" target="_blank">
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/PhiliptheFox.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<h2 style="font-family: demifont">Graphic Design</h2>
+	<img src="Portfolio/Graphics/HotDog.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	<div id="anim" class="main" style="display:none">
+	<p style="font-family: demifont">This is where I put my highest quality animations.  All of them are made from scratch.</p>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbInfiltrator.jpg" data-setup="{}">
+    <source src="Portfolio/Animations/The Infiltrator.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<p>This is an animation I made the first week of summer break.  I had just come up with the design for the main character of the video game I was planning to make for my capstone, and I wanted to make a mysterious feeling animation about him.  The video game will give this character a back story, and may clear up any confusion about what's going on.</p>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbTendo.png" data-setup="{}">
+    <source src="Portfolio/Animations/FinalEverythingTendo.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<p>I made this last year for the intro to my school's news channel.  It's a parody of all the Nintendo system logos with the major names replaced with Daybreak.</p>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbDuck.png" data-setup="{}">
+    <source src="Portfolio/Animations/The Adventures of Lord Duck.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<p>After I made The Infiltrator, I wanted to make a more light hearted animation.  Using Blender's Freestyle and a crumpled up paper, I was able to make the animation look almost hand drawn.  I would like to one day make a longer animation like this.</p>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbTrack.png" data-setup="{}">
+    <source src="Portfolio/Animations/MotionTrack.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<p>There's no sound in this video.  At the beginning of the school year, I was interested in motion tracking.  I've done this before, but this is my best example.  I used the character model for Philip the Fox from the game I made for the Ludum Dare 30.</p>
+	<div width="800" height="450" align="center">
+	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbCredit.png" data-setup="{}">
+    <source src="Portfolio/Animations/ExtraCredit.mp4" type='video/mp4'>
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+	</div>
+	<p>At the end of last year, I wanted to create a persona for myself.  I animated him, and wanted to make it silly and a little bit cheesy.</p>
+	</div>
+	<div id="grap" class="main" style="display:none">
+	<p style="font-family: demifont">This is where I put my best 2D and 3D stationary graphical creations.</p>
+	<img src="Portfolio/Graphics/HotDog.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>This is a hot dog ad I made at the beginning of the year.  Our class had to choose to design something from a list, and I chose a hot dog ad.</p>
+	<img src="Portfolio/Graphics/concertposter.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>Last year, as a side project, our class was told to design a concert poster.  This is the one I made.</p>
+	<img src="Portfolio/Graphics/mug.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>We had to design a list of products for a fictional company including a pen and a notepad.  This mug is the best looking one I made.</p>
+	<img src="Portfolio/Graphics/soapDONE.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>This is a soap box I had to design for another fictional company we had to make.</p>
+	<img src="Portfolio/Graphics/XboxWiiPS.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>This is an infographic I made last year comparing the Wii U, Xbox One, and PS4.</p>
+	<img src="Portfolio/Graphics/Orbison.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<p>This is a poster I had to design to commemorate Roy Orbison.</p>
+	</div>
+	<div id="vidg" class="main" style="display:none">
+	<p style="font-family: demifont">This is where I put the video games I've made. The images are links to the actual game.</p>
+	</a>
+	<a href="http://ludumdare.com/compo/ludum-dare-30/comment-page-2/?action=preview&uid=38981" target="_blank">
+	<h2 style="font-family: demifont">Philip the Fox</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/PhiliptheFox.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is the game I made for the 48 hour competition of Ludum Dare 30.  I got 62nd place in graphics.  The player character is a fox who is trying to escape a strange world he discovered bby jumping into a portal.</p>
+	<a href="http://silverxenolupus.github.io/ExtremeCartSimulator.html" target="_blank">
+	<h2 style="font-family: demifont">Extreme Cart Simulator</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/ExtremeCart.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is a game I made last year as a joke.  There's an admin at our school who rides around in a cart, and is notorious for taking peoples hats.</p>
+	<a href="https://106f6a91751fe45f1e58f52b9d4a4273362e0496.googledrive.com/host/0B2LpHt6FS_q2V290SVFWd3hWNU0/HauntedDWebsite.html" target="_blank">
+	<h2 style="font-family: demifont">Haunted Depths</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/HauntedDepths.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is a game I made in a week, because I wanted to try to make a horror game.  You have to turn on the lights in a large room before ghosts come and kill you.  It's worth playing, but it can get repetitive.</p>
+	<a href="https://play.google.com/store/apps/details?id=com.Xenolupus.CoinJumperFree&hl=en" target="_blank">
+	<h2 style="font-family: demifont">Jumping Guy</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/JumpingGuy.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is a game I made last year to see if I could make a mobile game.  You jump to avoid pits, spikes, and colect coins.  It is available for download for android devices.</p>
+	<a href="https://07e01782fc6ea1935bb302665acccb0ac82354d6.googledrive.com/host/0B2LpHt6FS_q2MU93VFhPYTkwVHM/That%20One%20Game%20Web.html?ch_id=-12766755681388040605228#MUxaaw3A9xBrCQsz" target="_blank">
+	<h2 style="font-family: demifont">That One Game</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/thatonegame.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is a game I started making at the beginning of sophomore year's summer.  You have a few things that you can place in a large world.  I stopped working on it, but it's still playable.</p>
+	</div>
+</div>
+<div class="footer">
+<p>Contact and or Hire me!<br>Xenolupus@gmail.com</p>
+</div>
+</body>
 </html>
