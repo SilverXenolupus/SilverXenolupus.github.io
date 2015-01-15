@@ -3,7 +3,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
-
+	$("#largeG").animate({height:'400px'});
 	
     $("#homeB").click(function(){
       $("#home").fadeIn("slow");
@@ -39,6 +39,12 @@
 	  $("#grap").fadeOut("slow");
 	  $("#vidg").fadeOut("slow");
 	  $("#cap").fadeIn("slow");
+    });
+	$("#largeG").mousedown(function(){
+	  $("#largeG").animate({height:'2825px'});
+    });
+	$("#largeG").mouseup(function(){
+	  $("#largeG").animate({height:'400px'});
     });
   });
   </script>
@@ -199,7 +205,7 @@
 	</div>
 <div class="outermain">
 	<div id="home" class="main">
-	<p style="font-family: demifont">Welcome to my digital portfolio.  This is where I put my best work.  Below is a small sample of the best I've done, if you're in a hurry.</p>
+	<p style="font-family: demifont">Hello, my name is David.  This is where I put my best work.  Below is a small sample of the best I've done, if you're in a hurry.</p>
 	<h2 style="font-family: demifont">Animation</h2>
 	<div width="800" height="450" align="center">
 	<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);" width="800" height="450" poster="Portfolio/Animations/ThumbInfiltrator.jpg" data-setup="{}">
@@ -209,9 +215,9 @@
 	</div>
 	<h2 style="font-family: demifont">Video Game</h2>
 	</a>
-	<a href="http://ludumdare.com/compo/ludum-dare-30/comment-page-2/?action=preview&uid=38981" target="_blank">
+	<a href="http://ludumdare.com/compo/ludum-dare-31/comment-page-2/?action=preview&uid=38981" target="_blank">
 	<div class="linkImage">
-	<img src="Portfolio/Videogames/PhiliptheFox.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	<img src="Portfolio/Videogames/RobertsRun.jpg" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
 	</div>
 	</a>
 	<h2 style="font-family: demifont">Graphic Design</h2>
@@ -258,7 +264,11 @@
 	<div id="grap" class="main" style="display:none">
 	<p style="font-family: demifont">This is where I put my best 2D and 3D stationary graphical creations.</p>
 	<img src="Portfolio/Graphics/HotDog.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
-	<p>This is a hot dog ad I made at the beginning of the year.  Our class had to choose to design something from a list, and I chose a hot dog ad.</p>
+	<p>This is a hot dog ad I made at the beginning of the year.  Our class had to choose to design something from a list of ideas, and I chose a hot dog ad.</p>
+	<div id="largeG" style = "overflow: hidden; height: 400 width: 800">
+	<img src="Portfolio/Graphics/25Graphic.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	<p>One of the assignments we had was to design 25 simple graphics to represent a category of some kind.  Mine was animation.  (Click to show the whole thing)</p>
 	<img src="Portfolio/Graphics/concertposter.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
 	<p>Last year, as a side project, our class was told to design a concert poster.  This is the one I made.</p>
 	<img src="Portfolio/Graphics/mug.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
@@ -273,13 +283,20 @@
 	<div id="vidg" class="main" style="display:none">
 	<p style="font-family: demifont">This is where I put the video games I've made. The images are links to the actual game.</p>
 	</a>
+	<a href="http://ludumdare.com/compo/ludum-dare-31/comment-page-2/?action=preview&uid=38981" target="_blank">
+	<h2 style="font-family: demifont">Robert's Run</h2>
+	<div class="linkImage">
+	<img src="Portfolio/Videogames/RobertsRun.jpg" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
+	</div>
+	</a>
+	<p>This is the game I made for the 48 hour competition of Ludum Dare 31.  This year I got 83rd place in graphics(worse by 21 places), but 59th place in fun(which is much more important).  You play as a robot running down a tube avoiding obstacles and collecting burgers.</p>
 	<a href="http://ludumdare.com/compo/ludum-dare-30/comment-page-2/?action=preview&uid=38981" target="_blank">
 	<h2 style="font-family: demifont">Philip the Fox</h2>
 	<div class="linkImage">
 	<img src="Portfolio/Videogames/PhiliptheFox.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
 	</div>
 	</a>
-	<p>This is the game I made for the 48 hour competition of Ludum Dare 30.  I got 62nd place in graphics.  The player character is a fox who is trying to escape a strange world he discovered bby jumping into a portal.</p>
+	<p>This is the game I made for the 48 hour competition of Ludum Dare 30.  I got 62nd place in graphics.  The player character is a fox who is trying to escape a strange world he discovered by jumping into a portal.</p>
 	<a href="http://silverxenolupus.github.io/ExtremeCartSimulator.html" target="_blank">
 	<h2 style="font-family: demifont">Extreme Cart Simulator</h2>
 	<div class="linkImage">
@@ -300,7 +317,7 @@
 	<img src="Portfolio/Videogames/JumpingGuy.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5);">
 	</div>
 	</a>
-	<p>This is a game I made last year to see if I could make a mobile game.  You jump to avoid pits, spikes, and colect coins.  It is available for download for android devices.</p>
+	<p>This is a game I made last year to see if I could make a mobile game.  You jump to avoid pits, spikes, and collect coins.  It is available for download for android devices.</p>
 	<a href="https://07e01782fc6ea1935bb302665acccb0ac82354d6.googledrive.com/host/0B2LpHt6FS_q2MU93VFhPYTkwVHM/That%20One%20Game%20Web.html?ch_id=-12766755681388040605228#MUxaaw3A9xBrCQsz" target="_blank">
 	<h2 style="font-family: demifont">That One Game</h2>
 	<div class="linkImage">
@@ -310,13 +327,12 @@
 	<p>This is a game I started making at the beginning of sophomore year's summer.  You have a few things that you can place in a large world.  I stopped working on it, but it's still playable.</p>
 	</div>
 	<div id="cap" class="main" style="display:none">
-	<p>This year, I am working on my capstone. It is going to be a platformer / puzzlesolver  game with a deep and involving story that doesn't drag you down into bordom with cutscenes.  Right now, I am working on a demo, so that I can program the main game-play mechanics and maybe get a following.  Right now I'm working on the animations and basic platforming controls of the player character.  I don't have a playable demo yet, like I had planned, but I do have some screen shots of what it will look like when I get it to build correctly.</p>
-	<img src="Portfolio/Capstone/shot1.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
-	<img src="Portfolio/Capstone/shot2.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
-	<img src="Portfolio/Capstone/shot3.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
-	<img src="Portfolio/Capstone/shot4.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
-	<img src="Portfolio/Capstone/shot5.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
-	<img src="Portfolio/Capstone/shot6.bmp" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
+	<p>This year, I am working on my capstone. It is going to be a platformer / puzzlesolver game with a deep and involving story that doesn't drag you down into bordom with cutscenes.  Right now, I am working on a demo, so that I can program the main game-play mechanics and maybe get a following.  Right now I'm working on the animations and basic platforming controls of the player character.  I don't have a playable demo yet, like I had planned, but I do have some screen shots of what it will look like when I get it to build correctly.</p>
+	<img src="Portfolio/Capstone/shot1.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
+	<img src="Portfolio/Capstone/shot2.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
+	<img src="Portfolio/Capstone/shot3.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
+	<img src="Portfolio/Capstone/shot4.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
+	<img src="Portfolio/Capstone/shot5.png" style = "box-shadow:3px 5px 19px 0px rgba(50, 50, 50, 0.5); width: 90%;">
 	</div>
 </div>
 <div class="footer">
